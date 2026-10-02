@@ -54,7 +54,7 @@ namespace KnifeHoldable
                     float maxDim = Mathf.Max(bounds.size.x, bounds.size.y, bounds.size.z);
                     if (maxDim > 0)
                     {
-                        float scaleFactor = 0.25f / maxDim;
+                        float scaleFactor = 0.45f / maxDim;
                         knife.transform.localScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
                     }
                     hasBounds = false;
@@ -67,7 +67,7 @@ namespace KnifeHoldable
                     knife.transform.SetParent(targetTransform, false);
                     knife.transform.localPosition = Vector3.zero;
                     knife.transform.localRotation = Quaternion.Euler(0f, 270f, -450f);
-                    knife.transform.localPosition += new Vector3(0.050f, 0.080f, 0.030f);
+                    knife.transform.localPosition += new Vector3(0.050f, 0.080f, 0.040f);
                     Shader opaqueShader = Shader.Find("Universal Render Pipeline/Lit");
                     if (opaqueShader == null) opaqueShader = Shader.Find("Standard");
                     Material grayMat = new Material(opaqueShader);
